@@ -1,0 +1,29 @@
+$color_white: #fff;
+$color_red: #f67280;
+$color_grey: #f2f1f8;
+$color_secondary: #b9b7c6;
+$color_grey_tertiary: #3f3d4e;
+$color_light: #f4f4f4;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'brandon-grotesque', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
