@@ -20,7 +20,7 @@
                     <a class="menu__link" href="#">Inicio</a>
                     <a class="menu__link" href="#">Portfolio</a>
                     <a class="menu__link" href="#">Serviços</a>
-                    <a class="menu__link btn btn--transparent btn--sm" href="#">Contacto</a>
+                    <a class="menu__link btn btn--transparent btn--sm form-btn">Contacto</a>
                 </nav>
             </header>
 
@@ -40,6 +40,30 @@
                 <img class="icon-go-end" src="assets/double-down-arrows-svgrepo-com.svg" alt="double-down-arrows" />
             </div>
         </div>
+    </section>
+
+    <section class="modal">
+        <form action=""> 
+            <div class="close">  &Cross; </div>
+            <h2> Contacte nos </h2>
+            <div class="inputGruop"> 
+                <label for="name">Primeiro nome *</label>
+                <input type="text" id="name"required>
+            </div>
+            <div class="inputGruop"> 
+                <label for="name2">Segundo nome *</label>
+                <input type="text" id="name2"required>
+            </div> 
+            <div class="inputGruop"> 
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="inputGruop">
+                <label for="mensagen">Sua mensagen *</label>
+                <textarea name="" id="email"></textarea> 
+            </div>
+            <a class="btn btn--default btn--lg"> Enviar </a>
+        </form>
     </section>
 
     <section class="services">
@@ -97,12 +121,14 @@
                 Deia
                 início ao seu sonho.
             </p>
-            <a href="#" class="btn btn--default btn--lg">Contactar</a>
+            <a class="btn btn--default btn--lg form-btn">Contactar</a>
         </div>
     </section>
 
     <footer>
         <p class="copyright">&copy; 2020 <a href="#" class="author">Nicásio Silva</a> MyThrone</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

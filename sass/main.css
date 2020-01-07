@@ -22,6 +22,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.modal-open {
+  overflow-y: hidden;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,6 +56,104 @@ header .menu__link:link, header .menu__link:visited {
 
 header .menu__link:hover, header .menu__link:active {
   color: #f67280;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+  -webkit-transition: All ease-in-out .3s;
+  transition: All ease-in-out .3s;
+}
+
+.modal h2 {
+  color: #3f3d4e;
+  text-align: center;
+}
+
+.modal.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.modal form {
+  margin: 10% auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #f2f1f8;
+  width: 100%;
+  max-width: 420px;
+  height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal form .close {
+  font-size: 2rem;
+  position: absolute;
+  color: #3f3d4e;
+  top: 5px;
+  right: 12px;
+  -webkit-transition: All ease-in-out .3s;
+  transition: All ease-in-out .3s;
+}
+
+.modal form .close:hover {
+  color: #f67280;
+  cursor: pointer;
+}
+
+.modal form .inputGruop {
+  width: 100%;
+  position: relative;
+  margin: .7rem 0;
+}
+
+.modal form .inputGruop input, .modal form .inputGruop textarea {
+  width: 100%;
+  height: 28px;
+  font-size: 1.2rem;
+  font-size: bold;
+  border: none;
+  color: #3f3d4e;
+  padding: .2rem .5rem;
+  border-bottom: 1px solid #3f3d4e;
+  -webkit-transition: All ease-in-out .3s;
+  transition: All ease-in-out .3s;
+  outline: none;
+  margin-top: .4rem;
+}
+
+.modal form .inputGruop input:focus, .modal form .inputGruop textarea:focus {
+  border-bottom: 1px solid #f67280;
+}
+
+.modal form .inputGruop textarea {
+  height: 130px;
+}
+
+.modal form button {
+  display: block;
+  margin: 1px auto;
 }
 
 .services {
